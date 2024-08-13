@@ -225,7 +225,7 @@ function Invoke-CITest
 {
     [CmdletBinding()]
     param(
-        [ValidateSet('UnelevatedPesterTests', 'ElevatedPesterTests', 'PSResourceGetACRTests')]
+        [ValidateSet('UnelevatedPesterTests', 'ElevatedPesterTests')]
         [string] $Purpose,
         [ValidateSet('CI', 'Others')]
         [string] $TagSet,
@@ -695,7 +695,7 @@ function Invoke-LinuxTestsCore
 {
     [CmdletBinding()]
     param(
-        [ValidateSet('UnelevatedPesterTests', 'ElevatedPesterTests', 'PSResourceGetACRTests', 'All')]
+        [ValidateSet('UnelevatedPesterTests', 'ElevatedPesterTests', 'All')]
         [string] $Purpose = 'All',
         [string[]] $ExcludeTag = @('Slow', 'Feature', 'Scenario'),
         [string] $TagSet = 'CI',
